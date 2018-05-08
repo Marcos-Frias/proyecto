@@ -1,0 +1,23 @@
+{
+  "name": "ProjectOne",
+  "homepage": "https://github.com/Marcos-Frias/proyecto",
+  "authors": [
+    "Marcos-Frias <marcosfelipe.frias.martinez@alumno.uttehuacan.edu.mx>"
+  ],
+  "description": "a basic bootstrap 4 projecct",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "fontawesome": "^5.0.12",
+    "jquery": "^3.3.1"
+  }
+}
