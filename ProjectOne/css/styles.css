@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 html{
   position: relative;
 }
@@ -26,3 +27,8 @@ body{
   }
 
 }
+=======
+.features .fas {
+  font-size: 32px;
+}
+>>>>>>> origin/master
