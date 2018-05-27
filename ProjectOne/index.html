@@ -108,13 +108,26 @@
   <script type="text/javascript" src="bower_components/hammerjs/hammer.js"></script>
   <script type="text/javascript">
     var $body = document.body;
+    var $navBar = document.getElementById('navbarNav');
+    var $buttonNavBar = document.getElementById('navigation');
     var gestures = new Hammer($body);
     gestures.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+
+    gestures.on('swipedown', function(ev) {
+      $buttonNavBar.classList.remove("collapsed");
+      $navBar.classList.add("collapsing");
+      $navBar.setAttribute("style", "height:120px");
+      $navBar.classList.add("show");
+      $navBar.classList.remove("collapsing");
+      $buttonNavBar.setAttribute("aria-expanded", "true");
+      $navBar.setAttribute("style", "");
+    });
+
     gestures.on('swipeup', function(ev) {
-    console.log(ev);
+      $navBar.classList.remove("show");
+      $buttonNavBar.classList.add("collapsed");
+      $buttonNavBar.classList.remove("aria-expanded");
     });
-    gestures.on('swiperight', function(ev) {
-    console.log(ev);
-    });
+
   </script>
 </html>
