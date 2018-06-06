@@ -2,6 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
     <title>Up and running with Bootstrap 4</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="bower_components/fontawesome/web-fonts-with-css/css/fontawesome-all.css">
@@ -114,19 +116,11 @@
     gestures.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
 
     gestures.on('swipedown', function(ev) {
-      $buttonNavBar.classList.remove("collapsed");
-      $navBar.classList.add("collapsing");
-      $navBar.setAttribute("style", "height:120px");
-      $navBar.classList.add("show");
-      $navBar.classList.remove("collapsing");
-      $buttonNavBar.setAttribute("aria-expanded", "true");
-      $navBar.setAttribute("style", "");
+      $buttonNavBar.click();
     });
 
     gestures.on('swipeup', function(ev) {
-      $navBar.classList.remove("show");
-      $buttonNavBar.classList.add("collapsed");
-      $buttonNavBar.classList.remove("aria-expanded");
+      $buttonNavBar.click();
     });
 
   </script>
